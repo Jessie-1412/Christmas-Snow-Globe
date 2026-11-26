@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/><meta name="theme-color" content="#17232e"/>
+<meta name="description" content="Let it snow — 一座掌心里的北极圣诞世界。转动、缩放，轻摇手机看雪落下。"/>
+<title>Let it snow</title><link rel="icon" href="data:,"/>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#17232e;color:#edf3f4;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}#app{position:fixed;inset:0}canvas{display:block;touch-action:none;outline:none;cursor:grab}canvas:active{cursor:grabbing}canvas:focus-visible{outline:1px solid #a9c1d0;outline-offset:-4px}
+header{position:fixed;top:max(32px,env(safe-area-inset-top));left:32px;z-index:2;pointer-events:none;text-shadow:0 1px 14px #1118}.eyebrow{font-size:10px;letter-spacing:.32em;font-weight:500;opacity:.7}.title{margin:10px 0 0;font-family:Georgia,serif;font-weight:400;font-size:30px;letter-spacing:-.025em}.edition{margin-top:10px;font-size:9px;letter-spacing:.18em;opacity:.5}#badge{display:none}
+#gesture-hint{position:fixed;z-index:2;bottom:max(28px,calc(env(safe-area-inset-bottom) + 14px));left:0;right:0;text-align:center;font-size:11px;letter-spacing:.12em;color:#e5edf0b8;pointer-events:none;transition:opacity 1s;text-shadow:0 1px 8px #0009}#gesture-hint.hidden{opacity:0}.credit-link{position:fixed;z-index:2;right:24px;top:max(36px,env(safe-area-inset-top));font-size:10px;letter-spacing:.12em;color:#e5edf099;text-decoration:none}
+#loader{position:fixed;inset:0;z-index:10;background:radial-gradient(ellipse at 50% 45%,#304958,#17232e 65%);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .7s;pointer-events:none}#loader.is-loaded{opacity:0}.loader-name{font-family:Georgia,serif;font-size:30px;letter-spacing:.12em}.loader-track{width:150px;height:1px;background:#ffffff20;margin:25px 0 16px}#loader-bar{height:100%;width:5%;background:#d5e3e8;transition:width .3s}#loader-status{font-size:10px;letter-spacing:.08em;color:#c0d3dc;max-width:80vw;text-align:center}.capture-mode #loader{display:none}
+@media(max-width:600px){header{left:24px;top:max(26px,calc(env(safe-area-inset-top) + 14px))}.title{font-size:25px}.credit-link{right:20px;top:max(30px,calc(env(safe-area-inset-top) + 18px))}.eyebrow{font-size:9px}.edition{font-size:8px}}@media(max-height:500px){header{top:18px}.title{font-size:22px;margin-top:6px}.edition{display:none}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<div id="loader" role="status" aria-live="polite"><div class="loader-name">Let it snow</div><div class="loader-track"><div id="loader-bar"></div></div><div id="loader-status">正在准备冬日世界…</div></div>
+<div id="app"></div><header><div class="eyebrow">CHRISTMAS SNOW GLOBE</div><h1 class="title">Let it snow</h1></header>
+<div id="badge" aria-hidden="true"></div><div id="gesture-hint">单指转动 · 双指缩放 · 双击复位 · 轻点开启体感转动</div>
+<script type="module" src="/src/main.ts"></script></body></html>
+
